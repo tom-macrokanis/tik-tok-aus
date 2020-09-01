@@ -1,34 +1,33 @@
-import React, {useRef, useState} from "react";
-import VideoFooter from './VideoFooter.js';
-import './Video.css';
+import React, { useRef, useState } from "react";
+import VideoFooter from "./VideoFooter.js";
+import "./Video.css";
 
 function Video() {
-    const [playing, setplay] = useState(false);
-    const videoRef = useRef(null);
-    const onVideoPress = () => {
-        if (playing) {
-            videoRef.current.pause();
-            setplay(false);
-        } else {
-            videoRef.current.play();
-            setplay(true);
-        }
-    };
+  const [playing, setplay] = useState(false);
+  const videoRef = useRef(null);
+  const onVideoPress = () => {
+    if (playing) {
+      videoRef.current.pause();
+      setplay(false);
+    } else {
+      videoRef.current.play();
+      setplay(true);
+    }
+  };
 
-    return  (
+  return (
     <div className="video">
-        <video 
+      <video
         className="video__player"
         loop
         onClick={onVideoPress}
         ref={videoRef}
-        src="https://v16m.tiktokcdn.com/57053a57570daffee63f4aad8859cb7b/5f293a9b/video/tos/useast2a/tos-useast2a-ve-0068c004/daefa85f76b44411a2c8db9b3ec00321/?a=1233&br=2440&bt=1220&cr=0&cs=0&dr=0&ds=3&er=&l=202008021038180101902090882BB7E224&lr=tiktok_m&mime_type=video_mp4&qs=0&rc=ajkzanJmeXhqdTMzMzczM0ApOTYzZDNkNWVnN2llaDlnZGdmb2Jra2A0LWFfLS0yMTZzcy0uMi5jXi8uLi8zNGMyLjI6Yw%3D%3D&vl=&vr=">
-        </video>
-        <VideoFooter />
-        {/* <VideoSidebar/>*/}
+        src="https://v16m.tiktokcdn.com/f880234e7bc5dc75c0929e91bd4bc988/5f4f1d03/video/tos/useast2a/tos-useast2a-ve-0068c001/31ff20ef5ae14ee5947f1556078f86bc/?a=1233&amp;br=2132&amp;bt=1066&amp;cr=0&amp;cs=0&amp;cv=1&amp;dr=0&amp;ds=3&amp;er=&amp;l=202009012218030101880612153C2C2C99&amp;lr=tiktok_m&amp;mime_type=video_mp4&amp;qs=0&amp;rc=aml2ZDhydGw2dzMzNzczM0ApMzZpOjs6PDs7Nzg2ZTszOWdqLWVxa2dfajRfLS1eMTZzczEtX15hNi8xMC1hLmMwYWM6Yw%3D%3D&amp;vl=&amp;vr="
+      ></video>
+      <VideoFooter />
+      {/* <VideoSidebar/>*/}
     </div>
-    );
-    
+  );
 }
 
 export default Video;
