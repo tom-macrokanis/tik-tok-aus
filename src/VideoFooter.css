@@ -20,9 +20,8 @@
 
 .videoFooter__record {
   animation: spinTheRecord infinite 5s linear;
-  height: 50px;
-  filter: invert(1);
   position: absolute;
+  padding-right: 20px;
   bottom: 0;
   right: 20px;
 }
